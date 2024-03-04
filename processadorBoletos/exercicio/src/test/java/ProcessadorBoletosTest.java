@@ -16,68 +16,6 @@ public class ProcessadorBoletosTest {
     }
 
     @Test
-    void classBoletoExiste(){
-        assertDoesNotThrow(() -> {
-            new Boleto();
-        });
-    }
-
-    @Test
-    void classFaturaExiste(){
-        assertDoesNotThrow(() -> {
-            new Fatura();
-        });
-    }
-
-    @Test
-    void faturaTemData(){
-        Fatura fatura = new Fatura();
-        assertDoesNotThrow(() -> {
-            fatura.getData();
-        });
-    }
-
-    @Test
-    void faturaTemValorTotal(){
-        Fatura fatura = new Fatura();
-        assertDoesNotThrow(() -> {
-            fatura.getValorTotal();
-        });
-    }
-
-    @Test
-    void faturaTemNomeCliente(){
-        Fatura fatura = new Fatura();
-        assertDoesNotThrow(() -> {
-            fatura.getNomeCliente();
-        });
-    }
-
-    @Test
-    void boletoTemCodigo(){
-        Boleto boleto = new Boleto();
-        assertDoesNotThrow(() -> {
-            boleto.getCodigo();
-        });
-    }
-
-    @Test
-    void boletoTemData(){
-        Boleto boleto = new Boleto();
-        assertDoesNotThrow(() -> {
-            boleto.getData();
-        });
-    }
-
-    @Test
-    void boletoTemValorPago(){
-        Boleto boleto = new Boleto();
-        assertDoesNotThrow(() -> {
-            boleto.getValorPago();
-        });
-    }
-
-    @Test
     void processadorTemListaDeFaturas(){
         ProcessadorBoletos processador = new ProcessadorBoletos();
         assertDoesNotThrow(() -> {

@@ -59,4 +59,12 @@ public class ProcessadorBoletosTest {
         });
     }
 
+    @Test
+    void boletoTemData(){
+        Boleto boleto = new Boleto();
+        assertDoesNotThrow(() -> {
+            boleto.getData();
+        });
+    }
+
 }

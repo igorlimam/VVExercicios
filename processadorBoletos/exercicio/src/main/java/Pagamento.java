@@ -16,6 +16,7 @@ public class Pagamento {
 
     public void addBoleto(Boleto boleto) {
         this.boletos.add(boleto);
+        this.tipoPagamento.add("BOLETO");
     }
 
     public List<String> getTipoPagamento() {

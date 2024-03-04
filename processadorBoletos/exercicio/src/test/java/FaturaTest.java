@@ -40,30 +40,30 @@ public class FaturaTest {
     }
 
     @Test
-    void faturaTemListaDeBoletos(){
+    void faturaTemListaDePagamento(){
         Fatura fatura = new Fatura();
         assertDoesNotThrow(() -> {
-            fatura.getBoletos();
+            fatura.getPagamentos();
         });
-        assertTrue(fatura.getBoletos() instanceof List<?>);
+        assertTrue(fatura.getPagamentos() instanceof List<?>);
     }
 
     @Test
     void faturaComecaComListaVazia(){
         Fatura fatura = new Fatura();
         assertDoesNotThrow(() -> {
-            fatura.getBoletos();
+            fatura.getPagamentos();
         });
-        assertEquals(0, fatura.getBoletos().size());
+        assertEquals(0, fatura.getPagamentos().size());
     }
 
     @Test
-    void faturaAddBoleto(){
+    void faturaAddPagamento(){
         Fatura fatura = new Fatura();
         assertDoesNotThrow(() -> {
-            fatura.addBoleto(new Boleto());
+            fatura.addPagamento(new Pagamento());
         });
-        assertEquals(1, fatura.getBoletos().size());
+        assertEquals(1, fatura.getPagamentos().size());
     }
 
 }

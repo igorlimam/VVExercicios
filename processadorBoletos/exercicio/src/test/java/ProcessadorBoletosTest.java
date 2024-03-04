@@ -39,4 +39,13 @@ public class ProcessadorBoletosTest {
         assertEquals(1, processador.getFaturas().size());
     }
 
+    @Test
+    void processadorTemListaDeSituacaoDasFaturas(){
+        ProcessadorBoletos processador = new ProcessadorBoletos();
+        assertDoesNotThrow(() -> {
+            processador.getStatusFaturas();
+        });
+        assertTrue(processador.getStatusFaturas() instanceof List<?>);
+    }
+
 }

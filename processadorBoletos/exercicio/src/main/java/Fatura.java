@@ -5,10 +5,10 @@ public class Fatura {
     private String data;
     private Double valorTotal;
     private String nomeCliente;
-    private List<Boleto> boletos;
+    private List<Pagamento> pagamentos;
 
     public Fatura(){
-        this.boletos = new ArrayList<Boleto>();
+        this.pagamentos = new ArrayList<Pagamento>();
     }
 
     public String getData(){
@@ -20,11 +20,11 @@ public class Fatura {
     public String getNomeCliente() {
         return nomeCliente;
     }
-    public List<Boleto> getBoletos(){
-        return this.boletos;
+    public List<Pagamento> getPagamentos(){
+        return this.pagamentos;
     }
 
-    public void addBoleto(Boleto boleto) {
-        this.boletos.add(boleto);
+    public void addPagamento(Pagamento pagamento) {
+        this.pagamentos.add(pagamento);
     }
 }

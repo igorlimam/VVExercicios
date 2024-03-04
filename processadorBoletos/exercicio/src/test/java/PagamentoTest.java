@@ -13,4 +13,29 @@ public class PagamentoTest {
             new Pagamento();
         });
     }
+
+    @Test
+    void pagamentoTemListaDeFaturas(){
+        Pagamento pagamento = new Pagamento();
+        assertDoesNotThrow(() -> {
+            pagamento.getFaturas();
+        });
+        assertTrue(pagamento.getFaturas() instanceof List<?>);
+    }
+
+    @Test
+    void pagamentoComecaComListaVazia(){
+        Pagamento pagamento = new Pagamento();
+        assertEquals(0, pagamento.getFaturas().size());
+    }
+
+    @Test
+    void pagamentoAddFatura(){
+        Pagamento pagamento = new Pagamento();
+        assertDoesNotThrow(() -> {
+            pagamento.addFatura(new Fatura());
+        });
+        assertEquals(1, pagamento.getFaturas().size());
+    }
+
 }

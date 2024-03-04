@@ -43,4 +43,12 @@ public class ProcessadorBoletosTest {
         });
     }
 
+    @Test
+    void faturaTemNomeCliente(){
+        Fatura fatura = new Fatura();
+        assertDoesNotThrow(() -> {
+            fatura.getNomeCliente();
+        });
+    }
+
 }

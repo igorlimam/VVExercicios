@@ -2,19 +2,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Pagamento {
-
-    private List<Fatura> faturas;
+    private List<String> tipoPagamento; //sempre boleto
+    private List<Boleto> boletos;
 
     public Pagamento(){
-        this.faturas = new ArrayList<>();
+        this.boletos = new ArrayList<>();
+        this.tipoPagamento = new ArrayList<>();
     }
 
-    public List<Fatura> getFaturas() {
-        return this.faturas;
+    public List<Boleto> getBoletos() {
+        return this.boletos;
     }
 
-    public void addFatura(Fatura fatura) {
-        this.faturas.add(fatura);
+    public void addBoleto(Boleto boleto) {
+        this.boletos.add(boleto);
+    }
+
+    public List<String> getTipoPagamento() {
+        return this.tipoPagamento;
     }
 
 }

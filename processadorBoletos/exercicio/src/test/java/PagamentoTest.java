@@ -15,27 +15,36 @@ public class PagamentoTest {
     }
 
     @Test
-    void pagamentoTemListaDeFaturas(){
+    void pagamentoTemTipoPagamento(){
         Pagamento pagamento = new Pagamento();
         assertDoesNotThrow(() -> {
-            pagamento.getFaturas();
+            pagamento.getTipoPagamento();
         });
-        assertTrue(pagamento.getFaturas() instanceof List<?>);
+        assertTrue(pagamento.getTipoPagamento() instanceof List<?>);
+    }
+
+    @Test
+    void pagamentoTemListaDeBoleto(){
+        Pagamento pagamento = new Pagamento();
+        assertDoesNotThrow(() -> {
+            pagamento.getBoletos();
+        });
+        assertTrue(pagamento.getBoletos() instanceof List<?>);
     }
 
     @Test
     void pagamentoComecaComListaVazia(){
         Pagamento pagamento = new Pagamento();
-        assertEquals(0, pagamento.getFaturas().size());
+        assertEquals(0, pagamento.getBoletos().size());
     }
 
     @Test
-    void pagamentoAddFatura(){
+    void pagamentoAddBoleto(){
         Pagamento pagamento = new Pagamento();
         assertDoesNotThrow(() -> {
-            pagamento.addFatura(new Fatura());
+            pagamento.addBoleto(new Boleto());
         });
-        assertEquals(1, pagamento.getFaturas().size());
+        assertEquals(1, pagamento.getBoletos().size());
     }
 
 }

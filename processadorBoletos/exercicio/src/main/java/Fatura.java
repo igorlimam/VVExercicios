@@ -6,9 +6,18 @@ public class Fatura {
     private Double valorTotal;
     private String nomeCliente;
     private List<Pagamento> pagamentos;
+    private String status;
 
     public Fatura(){
         this.pagamentos = new ArrayList<Pagamento>();
+        this.status = "-";
+    }
+
+    public Fatura(String data, Double valorTotal, String nomeCliente){
+        this();
+        this.data = data;
+        this.valorTotal = valorTotal;
+        this.nomeCliente = nomeCliente;
     }
 
     public String getData(){
@@ -26,5 +35,9 @@ public class Fatura {
 
     public void addPagamento(Pagamento pagamento) {
         this.pagamentos.add(pagamento);
+    }
+
+    public String getStatus(){
+        return this.status;
     }
 }

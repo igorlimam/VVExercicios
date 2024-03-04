@@ -23,4 +23,12 @@ public class Utils {
         return pagamentos;
     }
 
+    public static Fatura generateFatura(){
+        String data = "16/06/1969";
+        String nomeCliente = "Neil Armstrong";
+        Double valorTotal = 1500.00;
+        Fatura fatura = new Fatura(data, valorTotal, nomeCliente);
+        return fatura;
+    }
+
 }

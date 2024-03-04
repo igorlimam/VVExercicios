@@ -1,5 +1,6 @@
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
@@ -49,6 +50,14 @@ public class FaturaTest {
     }
 
     @Test
+    void faturaTemStatus(){
+        Fatura fatura = new Fatura();
+        assertDoesNotThrow(() -> {
+            fatura.getStatus();
+        });
+    }
+
+    @Test
     void faturaComecaComListaVazia(){
         Fatura fatura = new Fatura();
         assertDoesNotThrow(() -> {
@@ -67,16 +76,18 @@ public class FaturaTest {
     }
 
     @Test
-    void pagarFaturaParcialmente(){
-        Fatura fatura = new Fatura();
-
-    }
-
-    @Test
     void realizarPagamento(){
         Fatura fatura = new Fatura();
         fatura.addPagamento(Utils.generatePagamentos().get(0));
         assertEquals("BOLETO", fatura.getPagamentos().get(0).getTipoPagamento());
+    }
+
+    @Test
+    void pagarFaturaParcialmente(){
+        Fatura fatura = Utils.generateFatura();
+        Pagamento pagamento = Utils.generatePagamentos().get(0);
+        fatura.addPagamento(pagamento);
+        assertEquals("-", fatura.getStatus());
     }
 
 }

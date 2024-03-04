@@ -5,7 +5,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.ArrayList;
 import java.util.List;
 
-import util.*;
 import org.junit.jupiter.api.Test;
 
 public class PagamentoTest {

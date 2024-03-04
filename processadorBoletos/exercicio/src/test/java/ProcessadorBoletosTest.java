@@ -78,12 +78,27 @@ public class ProcessadorBoletosTest {
     }
 
     @Test
-    void processadorTenListaDeBoletos(){
+    void processadorTemListaDeFaturas(){
         ProcessadorBoletos processador = new ProcessadorBoletos();
         assertDoesNotThrow(() -> {
-            processador.getBoletos();
+            processador.getFaturas();
         });
-        assertTrue(processador.getBoletos() instanceof List<?>);
+        assertTrue(processador.getFaturas() instanceof List<?>);
+    }
+
+    @Test
+    void processadorComecaComListaVazia(){
+        ProcessadorBoletos processador = new ProcessadorBoletos();
+        assertEquals(0, processador.getFaturas().size());
+    }
+
+    @Test
+    void processadorAddFatura(){
+        ProcessadorBoletos processador = new ProcessadorBoletos();
+        assertDoesNotThrow(() -> {
+            processador.addFatura(new Fatura());
+        });
+        assertEquals(1, processador.getFaturas().size());
     }
 
 }

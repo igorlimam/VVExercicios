@@ -3,14 +3,18 @@ import java.util.List;
 
 public class ProcessadorBoletos {
 
-    private List<Boleto> boletos;
+    private List<Fatura> faturas;
 
     public ProcessadorBoletos(){
-        this.boletos = new ArrayList<Boleto>();
+        this.faturas = new ArrayList<Fatura>();
     }
 
-    public List<Boleto> getBoletos(){
-        return this.boletos;
+    public List<Fatura> getFaturas(){
+        return this.faturas;
+    }
+
+    public void addFatura(Fatura fatura){
+        this.faturas.add(fatura);
     }
 
 }

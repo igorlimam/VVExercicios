@@ -1,28 +1,40 @@
-package VVExercicios.processadorBoletos.exercicio.test.java;
-
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-import VVExercicios.processadorBoletos.exercicio.src.main.java.processadorboletos.*;
-
 public class ProcessadorBoletosTest {
 
     @Test
-    void doesClassProcessadorExist() {
+    void classProcessadorExiste() {
         ProcessadorBoletos processador = new ProcessadorBoletos();
         assertTrue(true);
     }
 
     @Test
-    void doesClassBoletoExist(){
-        Boleto boleto = new Boleto();
-        assertTrue(true);
+    void classBoletoExiste(){
+        assertDoesNotThrow(() -> {
+            new Boleto();
+        });
     }
 
     @Test
-    void doesClassFaturaExist(){
-        Fatura fatura = new Fatura();
-        assertTrue(true);
+    void classFaturaExiste(){
+        assertDoesNotThrow(() -> {
+            new Fatura();
+        });
     }
+
+    @Test
+    void faturaTemData(){
+        Fatura fatura = new Fatura();
+        assertDoesNotThrow(() -> {
+            fatura.getData();
+        });
+    }
+
+
+
 }

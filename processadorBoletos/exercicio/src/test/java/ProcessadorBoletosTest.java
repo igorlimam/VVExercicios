@@ -19,4 +19,10 @@ public class ProcessadorBoletosTest {
         Boleto boleto = new Boleto();
         assertTrue(true);
     }
+
+    @Test
+    void doesClassFaturaExist(){
+        Fatura fatura = new Fatura();
+        assertTrue(true);
+    }
 }

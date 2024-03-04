@@ -66,4 +66,17 @@ public class FaturaTest {
         assertEquals(1, fatura.getPagamentos().size());
     }
 
+    @Test
+    void pagarFaturaParcialmente(){
+        Fatura fatura = new Fatura();
+
+    }
+
+    @Test
+    void realizarPagamento(){
+        Fatura fatura = new Fatura();
+        fatura.addPagamento(Utils.generatePagamentos().get(0));
+        assertEquals("BOLETO", fatura.getPagamentos().get(0).getTipoPagamento());
+    }
+
 }

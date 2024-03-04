@@ -1,25 +1,18 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Pagamento {
-    private List<String> tipoPagamento; //sempre boleto
-    private List<Boleto> boletos;
+    private String tipoPagamento; //sempre boleto
+    private Boleto boleto;
 
-    public Pagamento(){
-        this.boletos = new ArrayList<>();
-        this.tipoPagamento = new ArrayList<>();
+    public Boleto getBoleto() {
+        return this.boleto;
     }
 
-    public List<Boleto> getBoletos() {
-        return this.boletos;
+    public Pagamento addBoleto(Boleto boleto) {
+        this.boleto = boleto;
+        this.tipoPagamento = "BOLETO";
+        return this;
     }
 
-    public void addBoleto(Boleto boleto) {
-        this.boletos.add(boleto);
-        this.tipoPagamento.add("BOLETO");
-    }
-
-    public List<String> getTipoPagamento() {
+    public String getTipoPagamento() {
         return this.tipoPagamento;
     }
 

@@ -3,6 +3,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 
 public class ProcessadorBoletosTest {
@@ -73,6 +75,15 @@ public class ProcessadorBoletosTest {
         assertDoesNotThrow(() -> {
             boleto.getValorPago();
         });
+    }
+
+    @Test
+    void processadorTenListaDeBoletos(){
+        ProcessadorBoletos processador = new ProcessadorBoletos();
+        assertDoesNotThrow(() -> {
+            processador.getBoletos();
+        });
+        assertTrue(processador.getBoletos() instanceof List<?>);
     }
 
 }

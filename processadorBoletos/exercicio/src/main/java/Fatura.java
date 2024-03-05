@@ -33,8 +33,14 @@ public class Fatura {
         return this.pagamentos;
     }
 
+    private Double pagamentosSum(){
+        return pagamentos.stream().mapToDouble(obj -> obj.getBoleto().getValorPago()).sum();
+
+    }
+
     public void addPagamento(Pagamento pagamento) {
         this.pagamentos.add(pagamento);
+        this.status = pagamentosSum().compareTo(this.valorTotal) >= 0 ? "PAGA" : "-";
     }
 
     public String getStatus(){

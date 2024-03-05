@@ -11,8 +11,9 @@ public class ProcessadorBoletosTest {
 
     @Test
     void classProcessadorExiste() {
-        ProcessadorBoletos processador = new ProcessadorBoletos();
-        assertTrue(true);
+        assertDoesNotThrow(() -> {
+            new ProcessadorBoletos();
+        });
     }
 
     @Test

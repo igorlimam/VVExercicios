@@ -68,16 +68,16 @@ public class FaturaTest {
 
     @Test
     void faturaAddPagamento(){
-        Fatura fatura = new Fatura();
+        Fatura fatura = Utils.generateFatura();
         assertDoesNotThrow(() -> {
-            fatura.addPagamento(new Pagamento());
+            fatura.addPagamento(Utils.generatePagamentos().get(0));
         });
         assertEquals(1, fatura.getPagamentos().size());
     }
 
     @Test
-    void realizarPagamento(){
-        Fatura fatura = new Fatura();
+    void realizarPagamentoTipoBoleto(){
+        Fatura fatura = Utils.generateFatura();
         fatura.addPagamento(Utils.generatePagamentos().get(0));
         assertEquals("BOLETO", fatura.getPagamentos().get(0).getTipoPagamento());
     }
@@ -88,6 +88,15 @@ public class FaturaTest {
         Pagamento pagamento = Utils.generatePagamentos().get(0);
         fatura.addPagamento(pagamento);
         assertEquals("-", fatura.getStatus());
+    }
+
+    @Test
+    void pagarFaturaTotalmente(){
+        Fatura fatura = Utils.generateFatura();
+        for(Pagamento pagamento:Utils.generatePagamentos()){
+            fatura.addPagamento(pagamento);
+        }
+        assertEquals("PAGA", fatura.getStatus());
     }
 
 }

@@ -1,0 +1,21 @@
+
+0
+java:S1220""Move this file to a named package.
+G
+java:S1602",Remove useless curly braces around statement(נעֵתשÿÿÿÿ
+S
+java:S1612"8Replace this lambda with method reference 'Fatura::new'.(נעֵתשÿÿÿÿ
+G
+java:S1602",Remove useless curly braces around statement(נעֵתשÿÿÿÿ
+G
+java:S1602",Remove useless curly braces around statement(נעֵתשÿÿÿÿ
+G
+java:S1602&",Remove useless curly braces around statement(נעֵתשÿÿÿÿ
+G
+java:S1602.",Remove useless curly braces around statement(נעֵתשÿÿÿÿ
+G
+java:S16027",Remove useless curly braces around statement(נעֵתשÿÿÿÿ
+G
+java:S1602?",Remove useless curly braces around statement(נעֵתשÿÿÿÿ
+G
+java:S1602H",Remove useless curly braces around statement(נעֵתשÿÿÿÿ

@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class FunctionalTest{
+public class AVLTest{
 
     private Fatura fatura;
     private Boleto boleto;
@@ -21,6 +21,7 @@ public class FunctionalTest{
     void teardown(){
         this.fatura = null;
         this.boleto = null;
+        this.pagamento = null;
     }
 
     //AVL

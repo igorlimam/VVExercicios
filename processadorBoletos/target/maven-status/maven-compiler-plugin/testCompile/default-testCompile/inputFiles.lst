@@ -1,1 +1,7 @@
-/home/VVExercicios/processadorBoletos/src/test/java/ProcessadorBoletosTest.java
+/home/igorlimam/LSI/VVExercicios/processadorBoletos/src/test/java/BoletoTest.java
+/home/igorlimam/LSI/VVExercicios/processadorBoletos/src/test/java/PagamentoTest.java
+/home/igorlimam/LSI/VVExercicios/processadorBoletos/src/test/java/DecisionTableTest.java
+/home/igorlimam/LSI/VVExercicios/processadorBoletos/src/test/java/EPTest.java
+/home/igorlimam/LSI/VVExercicios/processadorBoletos/src/test/java/FaturaTest.java
+/home/igorlimam/LSI/VVExercicios/processadorBoletos/src/test/java/AVLTest.java
+/home/igorlimam/LSI/VVExercicios/processadorBoletos/src/test/java/Utils.java
